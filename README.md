@@ -35,12 +35,12 @@ The Python-based GUI enables customizable experiments and video capture. The UI 
 ### Electronic System
 A custom-designed electronic circuit architecture that integrates an Arduino microcontroller with external hardware peripherals to autonomously regulate and monitor environmental variables during experiments. 
 #### Key Components
-- Arduino Uno microcontroller: main hardware control unit, drives light stimulus application and collects temperature data from thermocouple
-- 5V LED Strip: delivers controlled light and dark stimulus to the zebrafish
-- Thermocouple Type-K Glass Braid Insulated - K: monitors water temperature fluctuations
-- Thermocouple Amplifier MAX31855: amplifies the weak thermocouple signals for data acquisition
-- 30N06 MOSFET: enables LED control via the Arduino's GPIO pin
-- Resistors: current limiting and voltage division
+- **Arduino Uno microcontroller**: main hardware control unit, drives light stimulus application and collects temperature data from thermocouple
+- **5V LED Strip**: delivers controlled light and dark stimulus to the zebrafish
+- **Thermocouple Type-K Glass Braid Insulated - K**: monitors water temperature fluctuations
+- **Thermocouple Amplifier MAX31855**: amplifies the weak thermocouple signals for data acquisition
+- **30N06 MOSFET**: enables LED control via the Arduino's GPIO pin
+- **Resistors**: current limiting and voltage division
 
 ### Firmware
 An Arduino Uno microcontroller programmed to automatically apply and remove the light stimulus over a precise time interval set by the user. The program also continuously collects water temperature data and stimulus application timestamps over the entire experimental run, and sends the data to the software application over the Serial port for aggregation. 
