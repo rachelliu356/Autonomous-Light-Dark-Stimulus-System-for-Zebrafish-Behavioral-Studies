@@ -22,7 +22,7 @@ The Python-based GUI enables customizable experiments and video capture. The UI 
 - ```camera_panel.py``` enables customizable video recording. Allows the user choose a camera source, adjust image settings, view frames, save images, and record video. Displays camera preview via ```camera_preview_widget.py``` and refreshes the preview periodically using a Qt timer. 
 - ```camera_processor.py``` handles frame processing. Reads frames on a worker thread and applies crop, flip, rotation, inversion, scaling, exposure/offset, and optional background subtraction. Publishes original and processed frames through the defined channel interface.
 - The ```driver``` folder provides a way for the applications to connect to the camera source and retrieve image frames. It contains a shared ```CameraDriver``` class in ```camera_driver.py``` and three driver implementations:
-  - ```flir_camera_driver.py``` allows the application to connect to the FLIR camera. Finds the available camera, initializes it for continuous acquisition, and begins video capturing. Uses FLIR’s PySpin/Spinnaker API.
+  - ```flir_camera_driver.py``` allows the application to connect to the Forward Looking Infrared (FLIR) camera. Finds the available camera, initializes it for continuous acquisition, and begins video capturing. Uses FLIR’s PySpin/Spinnaker API.
   - ```replay_camera_driver.py``` enables video replay. Opens a video file with OpenCV.
   - ```dummy_camera_driver.py``` is an empty/default source implementation.
 
